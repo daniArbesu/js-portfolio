@@ -1,0 +1,72 @@
+.js-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  padding: 1rem;
+}
+
+.js-gallery > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.js-gallery > .card * {
+  pointer-events: none;
+}
+
+.js-gallery > .card > .image-container {
+  max-width: 200px;
+}
+
+.image-container > img {
+  width: 100%;
+}
+
+.score-container .star {
+  font-size: 1.5rem;
+}
+
+.js-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 15vh;
+  max-width: 90%;
+  max-height: 60vh;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  margin: 0 auto;
+  color: var(--color-secondary);
+  border-radius: 10px;
+}
+
+.js-modal button {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.modal-body {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.modal-body img {
+  max-width: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  .js-modal {
+    max-width: 80%;
+  }
+}
